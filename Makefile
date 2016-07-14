@@ -1,5 +1,5 @@
 all: bin/compile.sh
 	bin/compile.sh
 
-clean: bin/clean.sh
-	bin/clean.sh
+clean: build/
+	rm -rf build/

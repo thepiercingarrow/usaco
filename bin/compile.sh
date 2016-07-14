@@ -9,5 +9,8 @@ for EXT in 'c' 'cpp'; do
             echo gcc $SOURCE -O2 -o $(echo $SOURCE | sed 's/src/build/g' | sed "s/\.${EXT}$//g")
 	fi
 	gcc $SOURCE -O2 -o $(echo $SOURCE | sed 's/src/build/g' | sed "s/\.${EXT}$//g")
+	if [ $? != 0 ]; then
+	    exit 1;
+	fi
     done
 done
