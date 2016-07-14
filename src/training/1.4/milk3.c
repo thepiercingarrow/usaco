@@ -30,7 +30,7 @@ int main() {
   FILE *fout = fopen("milk3.out", "w");
   struct Set set;
   fscanf(fin, "%d %d %d\n", &set.A.cap, &set.B.cap, &set.C.cap);
-  memset(solutions, sizeof solutions, 0);
+  memset(solutions, 0, sizeof solutions);
   set.A.fill = set.B.fill = 0;
   set.C.fill = set.C.cap;
   search(set); // recursively search for all solutions
